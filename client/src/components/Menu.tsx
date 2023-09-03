@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CartIcon from "./CartIcon";
 
 const links = [
   { id: 1, title: "Homepage", url: "/" },
@@ -73,11 +74,11 @@ const Menu = () => {
             href={user ? "/orders" : "login"}
             onClick={() => setOpen(false)}
           >
-            
+
             {user ? "Orders" : "Login"}
           </Link>
           <Link href="/cart" onClick={() => setOpen(false)}>
-            {/*<CartIcon />*/}
+            <CartIcon />
           </Link>
         </div>
       )}
