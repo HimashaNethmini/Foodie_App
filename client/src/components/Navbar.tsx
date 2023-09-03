@@ -32,7 +32,7 @@ const Navbar = () => {
           <Image src="/phone.png" alt="" width={20} height={20} />
           <span>11 25 35 789</span>
         </div>
-        {/*{!user ? (
+        {!user ? (
           <Link href="/login">Login</Link>
         ) : (
           <Link href="/orders">Orders</Link>
