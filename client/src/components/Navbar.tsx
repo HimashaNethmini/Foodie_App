@@ -1,13 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
 import Menu from './Menu'
-//import CartIcon from "./CartIcon";
+import CartIcon from "./CartIcon";
 import Image from "next/image";
 
 const Navbar = () => {
   const user = false;
   return (
-    <div className='h-12 text-red-500 p-4 flex items-center justify-between border-b-2 border-b-red-500 uppercase md:h-2 lg:px-20 xl:px-40'>
+    <div className='h-12 text-red-500 p-4 flex items-center 
+    justify-between border-b-2 border-b-red-500 uppercase 
+    md:h-2 lg:px-20 xl:px-40'>
 
       {/*LEFT LINKS*/}
       <div className="hidden md:flex gap-4 flex-1 ">
@@ -35,7 +37,7 @@ const Navbar = () => {
         ) : (
           <Link href="/orders">Orders</Link>
         )}
-        {/*<CartIcon /> */}
+        <CartIcon /> 
       </div>
     </div>
   )
