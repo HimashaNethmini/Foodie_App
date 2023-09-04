@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const data = [
@@ -19,9 +19,23 @@ const data = [
     id: 3,
     title: "Best pizzas ever",
     image: "/slide3.png",
-  }
-]
+  },
+];
+
 const Slider = () => {
+
+  const [ currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(
+      () =>
+        setCurrentSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1)),
+      4000
+    );
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
     <div className=' flex flex-col h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)]
     lg:flex-row bg-fuchsia-50'>
