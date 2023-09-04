@@ -1,6 +1,26 @@
+"use client";
 import React from 'react'
 import Image from 'next/image'
 
+const data = [
+  {
+    id: 1,
+    title: "Always fresh & crispy hot",
+    image: "/slide1.png",
+  },
+
+  {
+    id: 2,
+    title: "We deliver your order wherever in NY",
+    image: "/slide2.png",
+  },
+
+  {
+    id: 3,
+    title: "Best pizzas ever",
+    image: "/slide3.png",
+  }
+]
 const Slider = () => {
   return (
     <div className=' flex flex-col h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)]
