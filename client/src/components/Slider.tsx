@@ -26,11 +26,12 @@ const Slider = () => {
 
   const [ currentSlide, setCurrentSlide] = useState(0);
 
+  //change the images every 4 seconds
   useEffect(() => {
     const interval = setInterval(
       () =>
         setCurrentSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1)),
-      3800
+      4000
     );
     return () => clearInterval(interval);
   }, []);
