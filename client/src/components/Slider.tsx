@@ -18,7 +18,7 @@ const data = [
   {
     id: 3,
     title: "Best pizzas ever",
-    image: "/slide3.png",
+    image: "/slide3.jpg",
   },
 ];
 
@@ -30,7 +30,7 @@ const Slider = () => {
     const interval = setInterval(
       () =>
         setCurrentSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1)),
-      4000
+      3800
     );
     return () => clearInterval(interval);
   }, []);
@@ -46,14 +46,17 @@ const Slider = () => {
       gap-8 text-red-500 font-bold'>
 
         <h1 className='text-5xl text-center uppercase p-4 md:p-10 md:text-6xl xl:text-7xl'>
-
+          { data [ currentSlide].title}
         </h1>
         <button className='bg-red-500 text-white py-4 px-8 uppercase text-2xl'> Order Now </button>
       </div>
 
       {/*IMAGE CONTAINER -  50% screen will be image */}
       <div className=' w-full flex-1 relative'>
-        <Image src="/slide1.png" alt="" fill className='object-cover' />
+        <Image src= { data [ currentSlide].image}
+         alt="" 
+         fill 
+         className='object-cover' />
       </div>
       
     </div>
